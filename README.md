@@ -1,133 +1,113 @@
 # Georg Wiesmüller
 
-**Business Informatics · Data Engineering · Data Quality & Automation · Security & AI Governance**
+**Business Informatics · Data Engineering · Automation & Integration · Security-aware Data Systems**
 
-I build small, reproducible data and automation systems with a focus on **data quality, reliability, traceability, security, and governance**.
+I am completing a **BSc in Business Informatics at FH Technikum Wien** and build reproducible data and automation systems with an emphasis on **data quality, reliability, traceability, clear system boundaries, and governance**.
 
-My current technical direction is **Data Engineering → Data/ML Platform Engineering**, with security and governance as complementary engineering concerns.
+My current technical direction is **Data Engineering → Data/ML Platform Engineering**, with security and governance as complementary engineering concerns rather than substitute claims for engineering experience.
 
-**Currently focused on internship, working-student and junior opportunities in Data Engineering, Data Quality, Automation/Integration and Data/AI Governance in Austria.**
+**Currently interested in internship, working-student and junior opportunities in Austria across Data Engineering, Data Platforms, Data Quality, Automation/Integration, and technical Data/AI Governance.**
 
-## Selected engineering evidence
+## Featured engineering evidence
 
 ### [Data Engineering Portfolio](https://github.com/gw-ai-security/data-engineering-projects)
 
-My strongest collection of implemented data-engineering work.
+My strongest collection of implemented Data Engineering work.
 
 **Euro Air Quality Pipeline**
 
-- Multi-source batch and streaming ingestion
-- Python and PostgreSQL
-- Apache Kafka
-- Spark Structured Streaming
-- Bronze / Silver / Gold architecture
-- Apache Parquet
-- Schema validation, deduplication and Data Quality checks
-- Reproducible local infrastructure with Docker Compose
+- multi-source batch and streaming ingestion
+- Python, PostgreSQL, Apache Kafka and Spark Structured Streaming
+- Bronze / Silver / Gold architecture and Apache Parquet
+- explicit schemas, deterministic event IDs, deduplication and Data Quality checks
+- reproducible local infrastructure with Docker Compose
 
-The portfolio also contains a reproducible **MongoDB weather/air-quality pipeline** and an AWS-oriented data-platform project currently under development.
+**Weather Air Vienna** adds a reproducible REST API → MongoDB → staging → daily aggregation pipeline.
+
+**CloudOps Insight Lake** is an AWS-oriented data-platform project in active development. Its current repository evidence focuses on architecture, source contracts, data grain, identity, Data Quality, observability, IAM design and cost-aware decisions before cloud implementation.
 
 ---
 
 ### [Cyber Governance Automation Lab](https://github.com/gw-ai-security/cyber-governance-automation-lab)
 
-A proof of concept for recurring cybersecurity control-evidence processes combining business-process modeling with reliable data processing.
+My current cross-disciplinary flagship project: a proof of concept for recurring security-control evidence, follow-up and reporting processes.
 
-- Explicit raw and curated data contracts
-- Extract → Normalize → Validate → Transform → Derive → Load pipeline
-- Ten deterministic Data Quality rules
-- Source-row lineage and row-preserving transformations
-- Governance and timeliness metrics
-- Data-minimized AI review queue
-- 42-test acceptance baseline
-- GitHub Actions CI
-- Pull-request workflow and protected `main`
-- Explicit separation between implemented and planned scope
+- Microsoft Forms and Power Automate evidence-intake and reminder workflows
+- deterministic Python ETL with **10 explicit Data Quality rules**
+- controlled operational snapshot → curated reporting boundary
+- source-controlled **Power BI PBIP / PBIR / TMDL** project
+- explicit semantic model and **21 version-controlled DAX measures**
+- Management Overview and Control Monitoring report pages
+- **53 automated tests** and GitHub Actions CI
+- minimized AI-review queue with final governance decisions kept human-controlled
 
-The next integration layer extends the implemented Python/data core with Microsoft Power Automate workflow automation.
+The repository deliberately distinguishes evidence presence, compliance, timeliness, workflow state and Data Quality instead of collapsing them into one synthetic status.
 
 ---
 
-### [AI Process Automation](https://github.com/gw-ai-security/AI-Process-Automation)
+### [Energy Community — Event-Driven Distributed System](https://github.com/gw-ai-security/energy-community)
 
-The **REST API Integration Hub** demonstrates secure system integration and workflow automation.
+Academic distributed-systems project demonstrating broader software and platform engineering fundamentals.
 
-- FastAPI
-- PostgreSQL
-- Docker Compose
-- n8n orchestration
+- six independently startable applications
+- Java and Spring Boot
+- RabbitMQ event-driven messaging
+- PostgreSQL, Spring Data JPA and Flyway migrations
+- read-only REST boundary and JavaFX client
+- Docker Compose infrastructure
+- explicit service ownership, message contracts and end-to-end verification documentation
+
+This project is useful evidence for asynchronous processing, system boundaries, persistence ownership and integration design beyond Python-only data pipelines.
+
+---
+
+### [AI Process Automation](https://github.com/gw-ai-security/ai-process-automation)
+
+Two implemented automation/integration modules complement the data-engineering portfolio.
+
+**REST API Integration Hub**
+
+- FastAPI, PostgreSQL, Docker Compose and n8n
 - REST APIs and webhooks
-- HMAC verification
-- Idempotency and replay protection
-- Structured audit logging
-- Dead Letter Queue
-- Mock external-system integrations
+- HMAC verification, idempotency and replay protection
+- structured audit logging and Dead Letter Queue handling
 
-The project uses simulated services and contains no real third-party credentials.
+**AI Workflow Automation Engine**
 
-## Engineering focus
+- webhook-driven operational intake workflow
+- structured LLM extraction with deterministic mock mode
+- PostgreSQL persistence for workflow state, events, errors and metrics
+- n8n branching with mock Jira / Slack targets
+- KPI summary endpoint with explicitly illustrative automation-impact estimates
 
-### Data Engineering
+The integrations are simulated portfolio systems and are not presented as production deployments.
 
-- Python
-- SQL and relational data
-- Batch and streaming pipelines
-- Kafka and Spark Structured Streaming
-- PostgreSQL and MongoDB
-- Parquet and layered data architectures
-- Data Quality and explicit data contracts
+## Technical focus
 
-### Automation & Integration
+| Area | Current evidence |
+|---|---|
+| **Data Engineering** | Python, SQL, PostgreSQL, MongoDB, Kafka, Spark Structured Streaming, Parquet, batch/streaming pipelines |
+| **Data Quality & Modeling** | explicit schemas, validation, deduplication, grain, identifiers, data contracts, curated reporting boundaries |
+| **Automation & Integration** | REST APIs, FastAPI, webhooks, n8n, Microsoft Power Automate, RabbitMQ |
+| **Systems Engineering** | Java, Spring Boot, Docker Compose, event-driven processing, service boundaries, persistence ownership |
+| **Reporting & Governance** | Power BI, DAX, lineage, traceability, auditability, evidence-oriented workflows |
+| **Engineering Practice** | Git/GitHub, pull-request workflows, automated tests, CI, architecture documentation, explicit limitations |
 
-- REST APIs
-- FastAPI
-- Webhooks
-- Workflow orchestration
-- Error handling and auditability
+## Additional relevant work
 
-### Reliability & Governance
-
-- Automated testing
-- CI
-- Lineage and traceability
-- Security-aware design
-- Data minimization
-- Human-controlled AI workflows
-
-## Additional work
-
-### [Agentic AI Projects](https://github.com/gw-ai-security/Agentic-Ai-Projects)
-
-Small, deliberately bounded AI prototypes focused on controlled tool usage, structured outputs, explainability and security-aware design.
-
-### [Secure AI Fraud Detection Pipeline](https://github.com/gw-ai-security/secure-ai-fraud-detection-pipeline)
-
-Synthetic-data ML engineering project covering feature engineering, model evaluation, API-based scoring, threat modeling and governance-oriented documentation.
-
-### [DEA-C01 Floci Hands-on Missions](https://github.com/gw-ai-security/de-floci-missions)
-
-A local AWS-compatible learning environment used to build and verify Data Engineering concepts while explicitly separating emulated behavior from real AWS capabilities.
-
-## Currently building
-
-### Cyber Governance Automation
-
-Extending the implemented Python and Data Quality core with **Microsoft Forms / Power Automate** workflow automation, followed by reporting and controlled AI-assisted review.
-
-### [CloudOps Insight Lake](https://github.com/gw-ai-security/data-engineering-projects/tree/main/cloudops-insight-lake)
-
-Developing an AWS-oriented data-platform project for Lambda cost, usage, governance and reliability analytics. Current repository work focuses on architecture, source contracts, data grain, identity, Data Quality and least-privilege design before cloud implementation.
+- [AWS Data Engineering Floci Lab](https://github.com/gw-ai-security/aws-data-engineering-floci-lab) — local AWS-compatible hands-on environment with explicit separation between emulated behavior and real AWS capabilities.
+- [Agentic AI Projects](https://github.com/gw-ai-security/agentic-ai-projects) — bounded AI prototypes focused on controlled tool use, structured outputs and security-aware design; one incident-analysis agent is currently implemented.
+- [Secure AI Fraud Detection Pipeline](https://github.com/gw-ai-security/secure-ai-fraud-detection-pipeline) — synthetic-data ML engineering project with feature engineering, model evaluation, API scoring, threat modeling and governance documentation.
+- [Healthcare AI Governance Assessment](https://github.com/gw-ai-security/healthcare-ai-governance-assessment) — Streamlit-based educational governance prototype with role-specific views and basic audit logging.
 
 ## Background
 
-My earlier professional experience spans **education and technical live-production environments**.
+My earlier professional experience spans **education and technical live-production environments**. That background contributes practical strengths in structured communication, requirements translation, documentation, handover, troubleshooting and reliability under time pressure.
 
-That background influences how I approach engineering today: structured problem solving, clear communication, reliability under pressure, documentation, handover and translating complex systems for different stakeholders.
-
-I am currently completing a **BSc in Business Informatics at FH Technikum Wien** and building practical engineering evidence around reliable data systems, automation and governance.
+I use GitHub as engineering evidence rather than as a course-completion log: the strongest repositories document **what is implemented, how it is verified, what remains planned, and where the limits are**.
 
 ---
 
-**Engineering principle:** implemented capability, planned architecture and production experience are different evidence levels. My repositories document those boundaries explicitly.
+**Engineering principle:** implemented capability, simulated integration, planned architecture and production experience are different evidence levels. I keep those boundaries explicit.
 
 [LinkedIn](https://www.linkedin.com/in/georg-w-8a7b11374/)
