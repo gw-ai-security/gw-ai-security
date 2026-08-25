@@ -8,7 +8,7 @@ My technical direction is **Data Engineering → Data/ML Platform Engineering**,
 
 **Open to internship, working-student and junior opportunities in Austria across Data Engineering, Data Platforms, Data Quality, Automation/Integration, and technical Data/AI Governance.**
 
-## Recruiter Snapshot
+## Snapshot
 
 | Area | Current engineering evidence |
 |---|---|
