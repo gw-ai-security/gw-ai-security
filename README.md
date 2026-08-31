@@ -12,22 +12,27 @@ My technical direction is **Data Engineering → Data/ML Platform Engineering**.
 
 ### 1. [SQL Data Engineering Portfolio](https://github.com/gw-ai-security/sql-data-engineering-portfolio)
 
-**SQL Server · T-SQL · Data Warehousing · Dimensional Modeling · Data Quality · Lineage**
+**SQL Server · T-SQL · Data Warehousing · Dimensional Modeling · Data Quality · Advanced SQL Analytics**
 
-A connected SQL portfolio covering a completed Bronze/Silver/Gold data warehouse and the next analytical stages of the same dataset.
+A completed end-to-end SQL portfolio that moves CRM and ERP source data through a validated Bronze/Silver/Gold warehouse into exploratory analysis, advanced analytics and reusable reporting views.
 
-**Implemented warehouse evidence:**
+**Implemented evidence:**
 
-- CRM + ERP CSV ingestion into SQL Server
+- CRM + ERP CSV ingestion into a Bronze/Silver/Gold SQL Server architecture
 - six Bronze source-aligned tables and batch loading
 - Silver cleansing, standardization and integration-key preparation
 - Gold `dim_customers`, `dim_products` and `fact_sales` analytical views
-- explicit grain, source precedence and star-schema modeling
-- Bronze, Silver and Gold validation scripts
-- lineage, integration documentation and column-level data catalog
-- validated snapshot: **18,484 customers · 295 current products · 60,398 sales lines**
+- explicit grain, source precedence, star-schema modeling, lineage and column-level data catalog
+- Bronze, Silver and Gold Data Quality validation
+- six-step Exploratory Data Analysis workflow across metadata, dimensions, dates, measures, magnitude and ranking
+- change-over-time, cumulative, performance and part-to-whole analysis
+- CTEs, window functions and `LAG`-based historical comparison
+- customer and product segmentation
+- reusable `gold.report_customers` and `gold.report_products` views
+- report-grain and fact-reconciliation validation
+- validated warehouse snapshot: **18,484 customers · 295 current products · 60,398 sales lines**
 
-The repository explicitly documents learning-project constraints instead of claiming production readiness.
+The repository explicitly documents learning-project constraints instead of presenting the implementation as production experience.
 
 → **[Review the SQL portfolio](https://github.com/gw-ai-security/sql-data-engineering-portfolio)**
 
@@ -83,11 +88,17 @@ The project keeps **evidence presence, compliance, timeliness, workflow state, D
 
 ## Current Build Direction
 
+Completed foundations:
+
 ```text
 SQL & Data Warehousing
         ↓
 Exploratory + Advanced SQL Analytics
-        ↓
+```
+
+Next build focus:
+
+```text
 Python Data Engineering
         ↓
 Data Modeling & Pipeline Engineering
