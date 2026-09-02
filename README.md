@@ -1,48 +1,27 @@
 # Georg Wiesmüller
 
-**Business Informatics · Data Engineering · Data Platforms · Data Quality & Governance-aware Engineering**
+**Business Informatics · Data Engineering · Dimensional Modeling · Data Quality · Automation**
 
-I am completing a **BSc in Business Informatics at FH Technikum Wien** and build reproducible data and integration systems with an emphasis on **data quality, reliability, traceability, explicit system boundaries, and honest engineering evidence**.
+Business Informatics student at **FH Technikum Wien** building reliable data pipelines, warehouses, semantic models and automation systems. My portfolio emphasizes **clear grain, reproducible transformations, Data Quality, testing, traceability and explicit engineering boundaries**.
 
-My technical direction is **Data Engineering → Data/ML Platform Engineering**. Security and governance are treated as engineering constraints that strengthen implementation rather than replace it.
+**Open to internship, working-student and junior opportunities in Austria across Data Engineering, Data Platforms, Analytics Engineering, Data Quality and technical automation.**
 
-**Open to internship, working-student and junior opportunities in Austria across Data Engineering, Data Platforms, Data Quality, Automation/Integration, and technical Data/AI Governance.**
+Current focus: strengthening independent **Python for Data Engineering**, then expanding into **AWS / data-platform engineering**.
 
-## Featured Engineering Evidence
+## Featured Projects
 
-### 1. [SQL Data Engineering Portfolio](https://github.com/gw-ai-security/sql-data-engineering-portfolio)
+| Project | Business / engineering problem | Evidence | Core stack |
+|---|---|---|---|
+| **[Data Engineering Portfolio](https://github.com/gw-ai-security/data-engineering-projects)** | Build reproducible batch and streaming pipelines from heterogeneous sources | Kafka + Spark streaming, Bronze/Silver/Gold, Parquet, Data Quality, API/NoSQL pipelines | Python, Kafka, Spark, PostgreSQL, MongoDB, Docker |
+| **[SQL Data Engineering Portfolio](https://github.com/gw-ai-security/sql-data-engineering-portfolio)** | Turn fragmented CRM/ERP source data into a validated analytical warehouse | Bronze/Silver/Gold, star schema, lineage, Data Quality, EDA, advanced SQL analytics | SQL Server, T-SQL |
+| **[Dimensional Data Modeling Portfolio](https://github.com/gw-ai-security/dimensional-data-modeling-portfolio)** | Redesign a deliberately broken analytical model into a trustworthy semantic layer | 6 dimensions + 6 facts, explicit grain, role-playing dimensions, reconciliation, Dynamic RLS | Power BI, Power Query, DAX, PBIP/TMDL |
+| **[Cyber Governance Automation Lab](https://github.com/gw-ai-security/cyber-governance-automation-lab)** | Make recurring security-control evidence measurable, testable and reviewable | deterministic DQ, workflow automation, Power BI, controlled AI review, 84 automated tests | Python, Power Automate, Power BI, FastAPI, pytest |
 
-**SQL Server · T-SQL · Data Warehousing · Dimensional Modeling · Data Quality · Advanced SQL Analytics**
+## Selected Engineering Evidence
 
-A completed end-to-end SQL portfolio that moves CRM and ERP source data through a validated Bronze/Silver/Gold warehouse into exploratory analysis, advanced analytics and reusable reporting views.
+### Data Engineering Portfolio
 
-**Implemented evidence:**
-
-- CRM + ERP CSV ingestion into a Bronze/Silver/Gold SQL Server architecture
-- six Bronze source-aligned tables and batch loading
-- Silver cleansing, standardization and integration-key preparation
-- Gold `dim_customers`, `dim_products` and `fact_sales` analytical views
-- explicit grain, source precedence, star-schema modeling, lineage and column-level data catalog
-- Bronze, Silver and Gold Data Quality validation
-- six-step Exploratory Data Analysis workflow across metadata, dimensions, dates, measures, magnitude and ranking
-- change-over-time, cumulative, performance and part-to-whole analysis
-- CTEs, window functions and `LAG`-based historical comparison
-- customer and product segmentation
-- reusable `gold.report_customers` and `gold.report_products` views
-- report-grain and fact-reconciliation validation
-- validated warehouse snapshot: **18,484 customers · 295 current products · 60,398 sales lines**
-
-The repository explicitly documents learning-project constraints instead of presenting the implementation as production experience.
-
-→ **[Review the SQL portfolio](https://github.com/gw-ai-security/sql-data-engineering-portfolio)**
-
----
-
-### 2. [Data Engineering Portfolio](https://github.com/gw-ai-security/data-engineering-projects)
-
-**Python · Kafka · Spark Structured Streaming · PostgreSQL · MongoDB · Parquet · Docker**
-
-The strongest implemented end-to-end pipeline is the **Euro Air Quality Pipeline**:
+The strongest pipeline combines historical batch sources and live API events into a layered analytical flow:
 
 ```text
 Batch sources ───────────────┐
@@ -51,79 +30,113 @@ Metadata source ─────────────┘                 ↓
                                          Data Quality
 ```
 
-It demonstrates multi-source batch and streaming ingestion, explicit schemas, deterministic event IDs, deduplication, Data Quality checks, Parquet persistence and reproducible local infrastructure.
-
-The same repository also contains **Weather Air Vienna** and the actively developed **CloudOps Insight Lake**, with planned AWS architecture kept clearly separate from implemented capability.
+Evidence includes explicit schemas, deterministic event IDs, deduplication, Spark Structured Streaming, Parquet persistence and reproducible local infrastructure.
 
 → **[Review the Data Engineering portfolio](https://github.com/gw-ai-security/data-engineering-projects)**
 
----
+### SQL Data Engineering Portfolio
 
-### 3. [Cyber Governance Automation Lab](https://github.com/gw-ai-security/cyber-governance-automation-lab)
+A completed SQL Server portfolio spanning **Data Warehouse → Exploratory Data Analysis → Advanced Analytics**.
 
-**Python · Power Automate · Power BI · FastAPI · Data Quality · Controlled AI Review · CI**
+Validated warehouse snapshot:
 
-A completed 11-phase proof of concept for recurring cybersecurity-control evidence, follow-up, reporting and controlled AI-assisted review.
+- **18,484 customers**
+- **295 current products**
+- **60,398 sales lines**
+- Gold star-schema views with explicit grain and source precedence
+- Data Quality checks across Bronze, Silver and Gold
+- reusable customer/product analytical reporting views
 
-**Engineering evidence:**
+→ **[Review the SQL portfolio](https://github.com/gw-ai-security/sql-data-engineering-portfolio)**
+
+### Dimensional Data Modeling Portfolio
+
+A completed Power BI semantic-model project that transforms a dense, error-prone source model into a validated **Star/Galaxy Schema**.
+
+Key evidence:
+
+- six dimensions and six facts with explicit business grains
+- shared and role-playing Date/Geo relationships
+- grain-aware measures and Dynamic Row-Level Security
+- reconciliation against **526,643.91 Total Sales / 80 Orders / 47 active customers**
+- a merge fan-out defect diagnosed at **97 rows for 80 Orders** and corrected back to the intended **80 / 80** order grain
+- PBIP/TMDL source control plus a focused Business Overview report
+
+→ **[Review the dimensional-modeling portfolio](https://github.com/gw-ai-security/dimensional-data-modeling-portfolio)**
+
+### Cyber Governance Automation Lab
+
+A completed proof of concept for recurring cybersecurity-control evidence, follow-up, reporting and controlled AI-assisted review.
+
+Key evidence:
 
 - deterministic Python pipeline with **10 explicit Data Quality rules**
-- controlled operational snapshot → curated reporting boundary
-- Power BI PBIP/PBIR/TMDL project with **21 DAX measures**
-- minimized AI review queue with JSON Schema validation and mandatory human review
-- local read-only FastAPI projection
-- reproducible locked Python environment and GitHub Actions CI
-- **84 automated tests passing** in the final accepted baseline
-- explicit Security Considerations and PoC-to-production gap assessment
-
-The project keeps **evidence presence, compliance, timeliness, workflow state, Data Quality, AI advice and REST exposure** as separate concepts.
+- source-controlled Power BI model with **21 DAX measures**
+- minimized AI review queue with schema/correlation validation and mandatory human review
+- read-only FastAPI boundary
+- **84 automated tests** in the accepted baseline
+- explicit PoC-to-production gap and security-boundary documentation
 
 → **[Review the Cyber Governance Automation Lab](https://github.com/gw-ai-security/cyber-governance-automation-lab)**
 
+## Technical Focus
+
+| Area | Current evidence |
+|---|---|
+| **Data Engineering** | batch/stream ingestion, ETL/ELT, layered architectures, schemas, Data Quality, Parquet |
+| **SQL & Warehousing** | T-SQL, SQL Server, CTEs, window functions, stored procedures, Bronze/Silver/Gold, star schemas |
+| **Data Modeling / BI** | dimensional modeling, grain, facts/dimensions, Power BI, Power Query, DAX, RLS, reconciliation |
+| **Python** | applied in pipeline/automation projects; currently strengthening independent implementation, debugging and testing |
+| **Streaming / Storage** | Kafka, Spark Structured Streaming, PostgreSQL, MongoDB |
+| **Engineering Practices** | Git/GitHub, Docker Compose, pytest, explicit failure handling, validation, documentation |
+| **Automation / Integration** | REST APIs, FastAPI, webhooks, Power Automate, workflow state and bounded AI-assisted processing |
+| **Cloud direction** | AWS data-engineering and data-platform skills in active development; production cloud experience is not claimed |
+
+## Current Build
+
+### [Python Data Engineering Learning](https://github.com/gw-ai-security/python-data-engineering-learning)
+
+Practice-first repository focused on independently implementing and debugging Python for Data Engineering rather than collecting syntax knowledge.
+
+Target outcome:
+
+```text
+REST API
+   ↓
+Raw JSON
+   ↓
+Validation + Standardization
+   ↓
+Business Transformation
+   ↓
+PostgreSQL + Parquet
+   ↓
+Data Quality + Logging + Tests
+```
+
+The current learning path deliberately keeps cloud/orchestration complexity out until the local Python pipeline is understandable, testable and reproducible.
+
 ## Additional Work
 
-- [Energy Community](https://github.com/gw-ai-security/energy-community) — Java/Spring Boot event-driven system with RabbitMQ, PostgreSQL, REST and Docker Compose.
-- [AI Process Automation](https://github.com/gw-ai-security/ai-process-automation) — signed webhooks, idempotency, workflow persistence and bounded AI-assisted automation.
-- [Secure AI Fraud Detection Pipeline](https://github.com/gw-ai-security/secure-ai-fraud-detection-pipeline) — synthetic-data ML pipeline with model serving, threat modeling and governance documentation.
+- **[AI Process Automation](https://github.com/gw-ai-security/ai-process-automation)** — signed webhooks, HMAC validation, idempotency/replay protection, workflow persistence, n8n and bounded AI extraction.
+- **[Energy Community](https://github.com/gw-ai-security/energy-community)** — Java/Spring Boot event-driven system with RabbitMQ, PostgreSQL, REST and Docker Compose.
+- **[Secure AI Fraud Detection Pipeline](https://github.com/gw-ai-security/secure-ai-fraud-detection-pipeline)** — synthetic-data ML pipeline with model serving, threat modeling and governance documentation.
+- **[Healthcare AI Governance Assessment](https://github.com/gw-ai-security/healthcare-ai-governance-assessment)** — evidence-oriented AI governance / GDPR assessment work.
 
-## Current Build Direction
-
-Completed foundations:
-
-```text
-SQL & Data Warehousing
-        ↓
-Exploratory + Advanced SQL Analytics
-```
-
-Next build focus:
-
-```text
-Python Data Engineering
-        ↓
-Data Modeling & Pipeline Engineering
-        ↓
-AWS / Data Platform Engineering
-        ↓
-Production Thinking
-(testing · observability · reliability · security · governance)
-```
-
-## Engineering Standard
+## Engineering Principles
 
 Across the portfolio I try to make the following reviewable rather than implicit:
 
-1. **Problem and grain before implementation** — define the business question, data grain, ownership and system boundary first.
-2. **Source facts before semantic repair** — preserve raw evidence and make transformations explicit.
-3. **Data Quality as a separate concern** — successful execution is not proof of correct data.
-4. **Failure paths and cardinality matter** — validate joins, row preservation, error handling and edge cases.
-5. **Evidence levels stay separate** — implemented, simulated, planned and production experience are not interchangeable.
-6. **A reviewer should not need to reverse engineer the project** — architecture, limitations, tests and handover paths are documented.
+1. **Business event and grain first** — define what one row means before joins, measures or relationships.
+2. **Data Quality is separate from successful execution** — pipelines can run while producing wrong data.
+3. **Validate failure paths, cardinality and row preservation** — a technically successful merge can still violate business semantics.
+4. **Keep evidence levels honest** — implemented, simulated, planned and production experience are not interchangeable.
+5. **Make projects easy to review** — architecture, tests, limitations and technical review paths should be visible without reverse engineering the repository.
 
 ## Background
 
-My earlier professional experience spans **education and technical live-production environments**. It contributes practical strengths in structured communication, requirements translation, documentation, handover, troubleshooting and reliability under time pressure.
+My earlier professional experience spans **education and technical live-production environments**. It contributes transferable strengths in troubleshooting, structured communication, documentation, handover and reliability under time pressure.
 
 ---
 
-[LinkedIn](https://www.linkedin.com/in/georg-w-8a7b11374/) · [SQL Portfolio](https://github.com/gw-ai-security/sql-data-engineering-portfolio) · [Data Engineering Portfolio](https://github.com/gw-ai-security/data-engineering-projects) · [Cyber Governance Lab](https://github.com/gw-ai-security/cyber-governance-automation-lab)
+[LinkedIn](https://www.linkedin.com/in/georg-w-8a7b11374/) · [Data Engineering](https://github.com/gw-ai-security/data-engineering-projects) · [SQL Portfolio](https://github.com/gw-ai-security/sql-data-engineering-portfolio) · [Dimensional Modeling](https://github.com/gw-ai-security/dimensional-data-modeling-portfolio)
